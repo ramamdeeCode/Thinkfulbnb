@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 500px;
+  width:100px;
 }
 
 /* ---  Groups & Items --- */
@@ -91,8 +91,9 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+
+margin-bottom: 20px;
+width: 180px;
 }
 
 form button {
@@ -127,7 +128,7 @@ footer p {
     margin: 10px;
   }
   .item-double {
-    flex: 1;
+    flex: 2;
     margin: 10px; 
   }
   header{
@@ -142,8 +143,25 @@ footer p {
     padding-top: 50px;
   }
 
- #ideas img {
+ #ideas img{
    width: 100%;
  }
- 
+ #host img{
+  width: 80%;
+}
+#about img{
+  width: 80%;
+}
+form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form-item{
+  display: flex;
+}
+form button {
+  width: 15%;
+}
+
 }
