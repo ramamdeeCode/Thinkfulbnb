@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -48,6 +48,7 @@ main img {
 
 .item-double {
   flex: 2;
+  
 }
 
 /* -------  Navigation ------- */
@@ -129,9 +130,34 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-/* display: flex;
+@media all and (min-width: 800px){
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* align-content: center; */
+    justify-content:space-around;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 36px;
+  }
+  .item-double{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   
-  align-items: center;
   
-  align-content: center;
-  justify-content:space-around; */
+}
