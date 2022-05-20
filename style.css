@@ -89,17 +89,20 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 form label {
-  font-weight: bold;
+  font-weight: bold; 
+  margin: 0 80px 0 10px;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
   width: 180px;
 }
 
@@ -111,6 +114,7 @@ form button {
   padding: 15px;
   width: 100%;
 }
+
 
 /* -------  Footer ------- */
 
@@ -125,3 +129,9 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+/* display: flex;
+  
+  align-items: center;
+  
+  align-content: center;
+  justify-content:space-around; */
