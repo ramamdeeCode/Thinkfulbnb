@@ -52,22 +52,28 @@ main img {
   
 }
 
-
 /* -------  Navigation ------- */
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+  /* flex-direction: column; */
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
- 
+  text-align: center;
 }
 
 .logo {
+  display: flex;
   font-family: "Pangolin", cursive;
-  font-size: 32px;
+  font-size: 72px;
   color: #fff;
+  flex-wrap: wrap;
+  flex: 1;
+  /* flex-shrink: 1;
+  flex-grow: 1; */
 }
 
 header nav ul {
@@ -75,13 +81,20 @@ header nav ul {
   justify-content:  center;
   flex-wrap: wrap;
   flex: 1;
+  
+  
 }
 
 header nav ul li {
   list-style-type: none;
+  
+  
 }
 
+
 header nav ul li a {
+  flex-wrap: wrap;
+  flex-shrink: 1;
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
@@ -94,32 +107,35 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #ff385c;
-  padding: 10px;
-}
-.control{
-  display: flex;
-  justify-content:space-between;
-  /* justify-items:center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #ff385c;
+    padding: 10px;
+  }
+/* .control{
+  flex-shrink: 1;
   flex-wrap: wrap;
-  /* flex-shrink: 1; */
-}
+} */
+.button{
+  align-items: stretch;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-wrap: wrap;
+} 
 form label {
-  font-weight: bold;
+  font-weight: bold; 
+  
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  margin-bottom: 20px; 
+  /* width: 180px; */
+  width: 50%;
 }
 
 form button {
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 1;
   background-color: #ff385c;
   border: none;
   color: #fff;
@@ -127,6 +143,7 @@ form button {
   padding: 15px;
   width: 100%;
 }
+
 
 /* -------  Footer ------- */
 
@@ -142,45 +159,50 @@ footer p {
 
 /* -------  Media Query ------- */
 @media all and (min-width: 480px){
-
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-  }
-  .logo {
-    font-size: 36px;
-  }
-
-  /* ---  Groups & Items --- */
   .group {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
- 
+ #about p{
+   justify-items: center;
+ }
 
-/* -------  Search Form ------- */
-form{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  form {
+    /* display: flex;  */
+    flex-direction: row;
+    /* align-items: center;
+    justify-content:start;
+    flex-wrap: nowrap;
+    flex-shrink: 1; */
+  }
   
-  flex-wrap: wrap;
-}
- .control{
+  
+  header {
     display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+  .logo {
+    font-size: 36px;
+  }
+ 
+  
+  form button {
+    background-color: #ff385c;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 12px;
+    width: 100%;
+  }
+  .control{
+    display: flex;
     width: 100%;
     flex: 1;
-  }
-  .form-button{
-    justify-items: center;
   }
 }
